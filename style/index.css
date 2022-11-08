@@ -1,0 +1,36 @@
+@font-face{
+    font-family: Verdana-Bold-Italic;
+    src: url(../font/verdana-bold-italic.ttf);
+}
+
+@font-face{
+    font-family: Verdana-Bold;
+    src: url(../font/verdana-bold.ttf);
+}
+
+body{
+    margin: 0;
+    background-image: url(../img/noise-fond.png);
+    background-repeat: repeat;
+}
+
+#red{
+    background-image: url(../img/noise-rouge.png);
+    background-repeat: repeat;
+    text-align: center;
+    opacity: 95%;
+    width: 96vw;
+    padding: auto 0.5vw auto 0.5vw;
+    margin: auto;
+    margin-top: 2vw;
+}
+
+header h1{
+    font-family: Verdana-Bold;
+    background-image: url(../img/noise-fond.png);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 130pt;
+    margin: 0;
+}
