@@ -43,6 +43,9 @@ header h1{
     padding: auto 0.5vw auto 0.5vw;
     margin: auto;
     margin-top: 1vh;
+    padding-top: 0.1vh;
+    padding-bottom: 0.5vh;
+    
 }
 header h2{
     font-family: Verdana-Bold;
@@ -52,4 +55,30 @@ header h2{
     color: transparent;
     font-size: 30pt;
     margin: 0;
+}
+
+nav{
+    margin: auto;
+    margin-top: 10vh;
+    display: flex;
+    width: 96vw;
+    justify-content: space-around;
+}
+
+nav div{
+    border-left: 2px black solid;
+    width: 33vw;    
+}
+nav h3{
+    font-family: Verdana-Bold;
+    font-size: 20pt;
+    text-align: center;
+}
+nav p{
+    text-align: justify;
+    margin: auto 1vw auto 1vw;
+}
+
+#last{
+    border-right: 2px black solid;
 }
