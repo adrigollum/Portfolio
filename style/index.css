@@ -34,3 +34,22 @@ header h1{
     font-size: 130pt;
     margin: 0;
 }
+#black{
+    background-image: url(../img/noise-noir.png);
+    background-repeat: repeat;
+    text-align: center;
+    opacity: 95%;
+    width: 96vw;
+    padding: auto 0.5vw auto 0.5vw;
+    margin: auto;
+    margin-top: 1vh;
+}
+header h2{
+    font-family: Verdana-Bold;
+    background-image: url(../img/noise-fond.png);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 30pt;
+    margin: 0;
+}
