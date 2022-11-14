@@ -110,6 +110,7 @@ nav h3{
 nav p{
     text-align: justify;
     margin: auto 1vw auto 1vw;
+    transition-duration: 500ms;
 }
 
 #last{
@@ -129,6 +130,15 @@ nav p{
 .cat:hover .filtre{
     opacity: 25%;
     transition-duration: 1000ms;
+}
+
+.filtre:hover, .cat p:hover{
+    cursor: pointer;
+}
+
+.cat:hover p{
+    font-size: 23pt;
+    transition-duration: 500ms;
 }
 
 .illu{
@@ -435,3 +445,4 @@ footer h2{
     text-align: center;
     margin: auto;
 }
+
