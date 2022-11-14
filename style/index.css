@@ -8,6 +8,19 @@
     src: url(../font/verdana-bold.ttf);
 }
 
+body::-webkit-scrollbar {
+    width: 0.5vw;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-image: url(../img/noise-noir.png);
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background-image: url(../img/noise-rouge.png);
+}
+
 body{
     margin: 0;
     background-image: url(../img/noise-fond.png);
@@ -34,6 +47,7 @@ header h1{
     font-size: 130pt;
     margin: 0;
 }
+
 
 #black{
     background-image: url(../img/noise-noir.png);
@@ -134,7 +148,7 @@ nav p{
     opacity: 60%;    
     width: 100%;
     height: 156px;
-    
+    transition-duration: 1000ms;
 }
 
 #Port{
@@ -190,5 +204,234 @@ nav p{
 }
 
 #prop button{
+    margin-top: 6vh;
     justify-self: flex-end;
+    width: 40%;
+}
+
+#prop p{
+    font-family: Verdana-Bold;
+    font-size: 12pt;
+    text-align: justify;
+}
+
+#icon{
+    display: flex;
+    justify-content: space-around;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+i{
+    margin-top: 6vh;
+    font-size: 35pt;
+    background-image: url(../img/noise-noir.png);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+#cont a i{
+    font-size: 15pt;
+}
+
+#cont a{
+    font-family: Verdana-Bold;
+    font-size: 12pt;
+    text-decoration: none;
+    color: black;
+}
+
+#cont{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 10%;
+    width: 80%;
+}
+
+iframe{
+    position: fixed;
+    top: 15%;
+    left: 27%;
+    width: 45vw;
+    height: 70vh;
+    background-color: blue;
+    border: none;
+    display: none;
+}
+
+.visible{
+    display: block;
+}
+
+#retour{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+}
+
+#revisible{
+    position: fixed;
+    background-image: url(../img/noise-fond.png);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 80%;
+    z-index: 2;
+}
+
+#msgnotsent{
+    display: none;
+}
+
+#msgsent{
+    position: fixed;
+    background-image: url(../img/noise-noir.png);
+    top: 25vh;
+    left: 25vw;
+    width: 50vw;
+    height: 50vh;
+    z-index: 3;
+    display: block;
+}
+
+#msgtitr{
+    margin-top: 5vh;
+    font-size: 50pt;
+    z-index: 3;
+}
+
+#conto{
+    background-image: url(../img/noise-fond.png);
+    width: 80%;
+    margin: auto;
+    padding-bottom: 1vh;
+    
+}
+
+#msgsent h1{
+    font-family: Verdana-Bold;
+    background-image: url(../img/noise-fond.png);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 15pt;
+    margin: 0;
+    text-align: center;
+    margin-top: 6vh;
+    transition-duration: 500ms;
+}
+
+#msgsent h1:hover{
+    cursor: pointer;
+    font-size: 17pt;
+    transition-duration: 500ms;
+}
+
+.tenor-gif-embed{
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 4%;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 80%;
+    margin: auto;
+}
+
+label{
+    font-family: Verdana-Bold;
+}
+
+.mails{
+    width: 20vw;
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+    background-image: url(../img/noise-noir.png);
+    border: none;
+    overflow: auto;
+    outline: none;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    resize: none;
+    font-family: Verdana-Bold;
+    color: rgba(240, 248, 255, 0.856);
+    padding: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.text{
+    width: 24vw;
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+    height: 10vh;
+    background-image: url(../img/noise-noir.png);
+    border: none;
+    overflow: auto;
+    outline: none;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    resize: none;
+    font-family: Verdana-Bold;
+    color: rgba(240, 248, 255, 0.856);
+    padding: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+form .button-31{
+    width: 7vw;
+    align-self: center;
+}
+
+textarea::-webkit-scrollbar {
+    width: 0.5vw;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background-image: url(../img/noise-rouge.png);
+    border-radius: 10px;
+}
+
+footer{
+    background-image: url(../img/noise-noir.png);
+    background-repeat: repeat;
+    text-align: center;
+    opacity: 95%;
+    width: 96vw;
+    padding: auto 0.5vw auto 0.5vw;
+    margin: auto;
+    margin-top: 10vh;
+    margin-bottom: 2vh;
+    padding-top: 0.1vh;
+    padding-bottom: 0.5vh;    
+    height: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer h2{
+    font-family: Verdana-Bold;
+    background-image: url(../img/noise-fond.png);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 15pt;
+    margin: 0;
+    text-align: center;
+    margin: auto;
 }
