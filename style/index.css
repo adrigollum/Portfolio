@@ -85,6 +85,9 @@ nav{
     border-left: 5px black solid;
     width: 33vw;    
 }
+a{
+    text-decoration: none;
+}
 
 nav h3{
     font-family: Verdana-Bold;
@@ -446,3 +449,7 @@ footer h2{
     margin: auto;
 }
 
+.cat a{
+    height: 156px;
+    text-decoration: none;
+}
