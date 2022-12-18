@@ -63,6 +63,23 @@
     </nav>
     <hr>
     <main>
+        <script>
+            function bite(image) {
+                document.getElementById('retour').id = 'revisible';
+                document.getElementById('msgnotsent').id = 'msgsent';
+                document.getElementById('grossebite').src = image.substring(0, image.length - 4)+'_720.jpg';
+                console.log('bite');
+              }
+        </script>
+
+        <div id="msgnotsent">
+            <i class="fa-sharp fa-solid fa-xmark" onclick="document.getElementById('revisible').id = 'retour';document.getElementById('msgsent').id = 'msgnotsent';"></i>
+            <img id="grossebite" src="" alt="">
+        </div>
+        <div id="retour" onclick="document.getElementById('revisible').id = 'retour';document.getElementById('msgsent').id = 'msgnotsent';">
+            
+        </div>
+
         <div class="projet" id="ovcd">
             <div id="titre">
                 <h2>Overcracked</h2>
@@ -71,25 +88,49 @@
                 <img class="illu" src="../projets/jeux/overcracked/minjpg.jpg" alt="">
                 <div class="txt">
                     <div class="qr"><h3>Type: </h3><p>&ensp; Jeu Vidéo</p></div>
-                    <div class="qr"><h3>Role: </h3><p>&ensp; Game Designer et Level Designer</p></div>
+                    <div class="qr"><h3>Rôle: </h3><p>&ensp; Game Designer et Level Designer</p></div>
                     <div class="qr"><h3>Date: </h3><p>&ensp; Novembre 2022</p></div>
-                    <h3>Description:</h3>
+                    <h3>Résumé :</h3>
                     <p class="desc">Ce jeu a été réalisé dans le cadre de la Gacha Jam 2022 avec une équipe de 10 personnes.
                         <br><br>
-                        Pour ma part j’ai été game et level designer, j’ai donc mis en place et établi les concepts du jeu et ses mécaniques puis créé le niveau dans lequel évoluent les joueurs. 
+                        Cuisinez de la drogue pour vos clients à bord d’un camion en fuite tandis que vos hallucinations essaient de vous empêcher de mener vos commandes à bien.
                         <br><br>
-                        Overcraked et un jeu dans le style d’Overcooked, on y incarne deux kangourous drogués, les Kangoucracks,  dans un camion qui doivent préparer des commandes de drogue pour leur client. Une des spécificités est que les ingrédients en plus de leurs couleurs ont différents états qui sont invisibles pour le joueur qui devra secouer l'ingrédient pour entendre le bruit qu’il fait et déterminer son état. 
-                        À cela s'ajoutent des hallucinations que devront combattre les joueurs pour éviter que celle-ci ne vole des ingrédients ou ne bloque un des deux joueurs.
-                        </p>
+                        Il faudra être bien concentré et être à l'écoute de vos ingrédients. 
+                    </p>
                 </div>
                 
             </div>
+            <section>
+                <h3 id="res">Description :</h3>
+                <p>
+                    Ce jeu étant un jeu de jam il répond avant tout aux contraintes et au thèmes qui ont encadré sa création. Dans le cas d’Overcracked notre thèmes consister en 3 emojis: un Kangourou, un Arc-en-ciel et une Seringue.
+                    <br><br>
+                    Pour ce qui était de nos contraintes les voici:
+                    <br>
+                    - Le jeu devait être en flat design
+                    <br>
+                    - Le jeu devait contenir du pathfinding
+                    <br>
+                    - La situation initial du jeu devait être donné par une IA en lui donnant la phrase “once upon a time”
+                    <br>
+                    - La musique devait avoir une représentation visuel dans le jeu
+                    <br>
+                    - Le jeu devait contenir une mécanique basée sur le son sans représentation visuelle
+                    <br><br>
+                    Overcraked est donc un jeu dans le style d’Overcooked, on y incarne deux kangourous drogués, les Kangoucracks,  dans un camion qui doivent préparer des commandes de drogue pour leur client. 
+                    Une des spécificités est que les ingrédients en plus de leurs couleurs ont différents états qui sont invisibles pour le joueur qui devra secouer l'ingrédient pour entendre le bruit qu’il fait et déterminer son état. 
+                    À cela s'ajoutent des hallucinations que devront combattre les joueurs pour éviter que celle-ci ne vole des ingrédients ou ne bloque un des deux joueurs.
+                    <br><br>
+                    Ce jeu et cette game jam ont pour moi été l'occasion de travailler avec une équipe plus conséquente que pour mes précédents jeux. J’ai beaucoup appris de cette expérience et notamment organiser et harmoniser le travail de chacun pour coller le plus possible à l'idée originale et avoir un tout cohérent tout en faisant évoluer le jeu au fur et à mesure du projet.
+                    
+                </p>
+            </section>
             <h3>Gallerie</h3>
             <div class="glery">
-                <img class="illu" src="../projets/jeux/overcracked/intro.jpg" alt="">
-                <img class="illu" src="../projets/jeux/overcracked/tuto.jpg" alt="">
-                <img class="illu" src="../projets/jeux/overcracked/jeu.jpg" alt="">
-                <img class="illu" src="../projets/jeux/overcracked/credit.jpg" alt="">
+                <img class="illu" onclick="bite(this.src);" src="../projets/jeux/overcracked/intro.jpg" alt="">
+                <img class="illu" onclick="bite('../projets/jeux/overcracked/tuto.jpg');" src="../projets/jeux/overcracked/tuto.jpg" alt="">
+                <img class="illu" onclick="bite('../projets/jeux/overcracked/jeu.jpg');" src="../projets/jeux/overcracked/jeu.jpg" alt="">
+                <img class="illu" onclick="bite('../projets/jeux/overcracked/credit.jpg');" src="../projets/jeux/overcracked/credit.jpg" alt="">
             </div>
             <div class="doss">
                 <a target="_blank" href="https://drive.google.com/drive/folders/1jiNVL5t42HY40e8Jd7j4ikfXG-ST-F0Q?usp=share_link">
@@ -107,29 +148,52 @@
                 <h2>L'Effondrement</h2>
             </div>
             <div class="imgtxt">
-                <img class="illu" src="../projets/photo/Ciel/ciel-leger.webp" alt="">
+                <img class="illu" src="../projets/jeux/effondrement/titre.jpg" alt="">
                 <div class="txt">
                     <div class="qr"><h3>Type: </h3><p>&ensp; Jeu Vidéo</p></div>
-                    <div class="qr"><h3>Role: </h3><p>&ensp; Game Designer</p></div>
+                    <div class="qr"><h3>Rôle: </h3><p>&ensp; Game Designer et Level Designer</p></div>
                     <div class="qr"><h3>Date: </h3><p>&ensp; Novembre 2022</p></div>
-                    <h3>Description:</h3>
-                    <p class="desc">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+                    <h3>Résumé :</h3>
+                    <p class="desc">
+                        Le monde a commencé à s’effondrer, notre société s’effondre sous son propre poids laissant l’humanité en proie à la sauvagerie.
+                        <br><br>
+                        Pour fuir ce chaos, une seule solution : atteindre la cité de Perpignan, dernier bastion de l’humanité libre et capitaliste. Malheureusement, le voyage sera long et périlleux, vous partirez de Lille, où vous y ferez vos provisions au Lidl le plus proche et partirez à bord de votre camionnette.
+                        <br><br>
+                        Vous traverserez la France de ville en ville, vous y ferez des rencontres surprenantes et récolterez des ressources pour votre périple.
+                        <br>
+                        Cependant, si au bout de 10 jours vous n’avez toujours pas atteint la cité de Perpignan, ses grandes portes se refermeront, laissant ainsi disparaître l’espoir et vous laissant seul face au chaos.
+
+                    </p>
                 </div>
                 
             </div>
+            <section>
+                <h3 id="res">Description :</h3>
+                <p>
+                    Ce jeu a été conçu à l’occasion de l'unijam et répond au thème suivant: La distance rend toute chose infiniment plus précieuse.
+                    <br><br>
+                    Pour répondre à ce thème j’ai essayé de concevoir un jeu autour d’un voyage qui serait de plus en plus difficile au fur et à mesure que l’on s'éloigne de notre point de départ. Les ressources se faisant plus rares et les dangers plus grands
+                    <br><br>
+                    Pour ce qui est de l’univers du jeu nous nous sommes inspirés de la websérie “L’Effondrement” des Parasites, c’est-à-dire une fuite face à l'effondrement de notre société mais nous avons décidé d’y rajouter un ton plus léger et absurde comme peuvent l’être beaucoup de point and click
+                    <br><br>
+                    Au vu du temps court et du fait que nous n'ayons qu’un seul développeur nous avons décidé de nous tourner vers le genre du visual novel / point click.
+                    <br><br>
+                    Ce jeu est le premier que j’ai réalisé en game jam, et ce fut aussi le cas pour beaucoup des membres de l'équipe de 3 personnes avec lesquels j’ai travaillé pour ce jeu. Cette expérience m'a permis d'expérimenter la gestion de projet et d'équipe.
+                    <br><br>
+                    Jeu disponible ici: <a href="https://expedition.davall.fr" target="_blank">https://expedition.davall.fr</a> 
+                </p>
+            </section>
             <h3>Gallerie</h3>
             <div class="glery">
-                <img class="illu" src="../projets/photo/Ciel/ciel-leger.webp" alt="">
-                <img class="illu" src="../projets/photo/Ciel/ciel-leger.webp" alt="">
-                <img class="illu" src="../projets/photo/Ciel/ciel-leger.webp" alt="">
-                <img class="illu" src="../projets/photo/Ciel/ciel-leger.webp" alt="">
-                <img class="illu" src="../projets/photo/Ciel/ciel-leger.webp" alt="">
-                <img class="illu" src="../projets/photo/Ciel/ciel-leger.webp" alt="">
-                <img class="illu" src="../projets/photo/Ciel/ciel-leger.webp" alt="">
-                <img class="illu" src="../projets/photo/Ciel/ciel-leger.webp" alt="">
+                <img class="illu" onclick="bite(this.src);" src="../projets/jeux/overcracked/intro.jpg" alt="">
+                <img class="illu" onclick="bite('../projets/jeux/overcracked/tuto.jpg');" src="../projets/jeux/overcracked/tuto.jpg" alt="">
+                <img class="illu" onclick="bite('../projets/jeux/overcracked/jeu.jpg');" src="../projets/jeux/overcracked/jeu.jpg" alt="">
+                <img class="illu" onclick="bite('../projets/jeux/overcracked/credit.jpg');" src="../projets/jeux/overcracked/credit.jpg" alt="">
             </div>
             <div class="doss">
-                <button class="button-31"> Dossier du Projet</button>
+                <a target="_blank" href="https://drive.google.com/drive/folders/1jiNVL5t42HY40e8Jd7j4ikfXG-ST-F0Q?usp=share_link">
+                    <button class="button-31"> Dossier du Projet</button>
+                </a>
             </div>
             
         </div>
