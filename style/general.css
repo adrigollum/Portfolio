@@ -112,7 +112,7 @@ a:hover p{
     
 }
 
-.illu:hover{
+.glery .illu:hover{
     cursor: zoom-in;
 }
 
@@ -322,6 +322,11 @@ section p{
     font-size: 25pt;
 }
 
+section p a{
+    text-decoration: none;
+    color: rgba(240, 248, 255, 0.856);
+}
+
 #retour{
     position: fixed;
     top: 0;
@@ -340,6 +345,10 @@ section p{
     height: 100vh;
     opacity: 80%;
     z-index: 2;
+}
+
+#revisible:hover{
+    cursor: zoom-out;
 }
 
 #msgnotsent{
@@ -387,4 +396,5 @@ section p{
     color: transparent;
     transition-duration: 100ms;
 }
+
 
