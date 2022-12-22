@@ -398,3 +398,26 @@ section p a{
 }
 
 
+.fa-chevron-left{
+    color: rgba(240, 248, 255, 0.856);
+    font-size: 4vw;
+    position: fixed;
+    top: 45vh;
+    left: 12.5vw;
+}
+
+.fa-chevron-right{
+    color: rgba(240, 248, 255, 0.856);
+    font-size: 4vw;
+    position: fixed;
+    top: 45vh;
+    right: 12vw;
+}
+
+.fa-chevron-left:hover{
+    cursor: pointer;
+}
+
+.fa-chevron-right:hover{
+    cursor: pointer;
+}

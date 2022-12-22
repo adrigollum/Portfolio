@@ -9,7 +9,7 @@
     <link href="style\index.css" rel="stylesheet">
     <meta name="google-site-verification" content="jGIemDTL_s01fj9C5MNyP4vg6DGvgDfQYN4PoCLg9As" />
     <script src="https://kit.fontawesome.com/f9580f06bb.js" crossorigin="anonymous"></script>
-    <link rel="icon" type="image/png" href="/img/icone.png?v=2">
+    <link rel="icon" type="image/png" href="/Portfolio/img/icone.png?v=2">
     
 
 </head>
@@ -40,7 +40,7 @@
             <img class="filtre" src="../img/noise-fond.png" alt="">
             <p>La Lisiere de R'Yleh</p>
         </a>
-        <a href="">
+        <a href="#exp">
             <img class="illu" src="../projets/jeux/cochonne_s game/0/acceuil-leger.jpg" alt="">
             <img class="filtre" src="../img/noise-fond.png" alt="">
             <p>Explore</p>
@@ -64,15 +64,72 @@
     
     <main>
         <script>
-            function bite(image) {
+            var num="";
+            var gosse=[];
+            var idd="";
+            var ima = "";
+            function bite(image,idd) {
                 document.getElementById('retour').id = 'revisible';
                 document.getElementById('msgnotsent').id = 'msgsent';
                 document.getElementById('grossebite').src = image.substring(0, image.length - 4)+'_720.jpg';
-                console.log('bite');
+                var papa = idd.parentElement;
+                gosse = papa.children;
+                ima = image;
+                for (let i=0;i<gosse.length;i+=1){
+                    
+                    if(gosse[i].src==image){
+                        console.log(gosse[i]);
+                        console.log(i);
+                        num=i;
+                        return num;
+                        return gosse;
+                        
+                    }
+                }
+                return ima
+                console.log(gosse);
               }
+
+
+            function change_bite(sens) {
+                if(sens=='L' && num !=0){
+                    var image = gosse[num-1].src;
+                    document.getElementById('grossebite').src = image.substring(0, image.length - 4)+'_720.jpg';
+                }
+                else if(sens=='L' && num ==0){
+                    var image = gosse[gosse.length-1].src;
+                    document.getElementById('grossebite').src = image.substring(0, image.length - 4)+'_720.jpg';
+                }
+                else if(sens=='R' && num !=gosse.length-1){
+                    var image = gosse[num+1].src;
+                    document.getElementById('grossebite').src = image.substring(0, image.length - 4)+'_720.jpg';
+                }
+                else if(sens=='R' && num ==gosse.length-1){
+                    var image = gosse[0].src;
+                    document.getElementById('grossebite').src = image.substring(0, image.length - 4)+'_720.jpg';
+                }
+                
+                
+                for (let i=0;i<gosse.length;i+=1){
+                    
+                    if(gosse[i].src==image){
+                        console.log(gosse[i]);
+                        console.log(i);
+                        num=i;
+                        return num;
+                        return gosse;
+                        
+                    }
+                }
+                return ima
+                console.log(gosse);
+                
+            }
         </script>
 
         <div id="msgnotsent">
+            <i class="fa-solid fa-chevron-left" onclick="change_bite('L')"></i>
+            <i class="fa-solid fa-chevron-right" onclick="change_bite('R')"></i>            
             <i class="fa-sharp fa-solid fa-xmark" onclick="document.getElementById('revisible').id = 'retour';document.getElementById('msgsent').id = 'msgnotsent';"></i>
             <img id="grossebite" src="" alt="">
         </div>
@@ -127,10 +184,10 @@
             </section>
             <h3>Gallerie</h3>
             <div class="glery">
-                <img class="illu" onclick="bite(this.src);" src="../projets/jeux/overcracked/intro.jpg" alt="">
-                <img class="illu" onclick="bite(this.src);" src="../projets/jeux/overcracked/tuto.jpg" alt="">
-                <img class="illu" onclick="bite(this.src);" src="../projets/jeux/overcracked/jeu.jpg" alt="">
-                <img class="illu" onclick="bite(this.src);" src="../projets/jeux/overcracked/credit.jpg" alt="">
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/jeux/overcracked/intro.jpg" alt="">
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/jeux/overcracked/tuto.jpg" alt="">
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/jeux/overcracked/jeu.jpg" alt="">
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/jeux/overcracked/credit.jpg" alt="">
             </div>
             <div class="doss">
                 <a target="_blank" href="https://drive.google.com/drive/folders/1jiNVL5t42HY40e8Jd7j4ikfXG-ST-F0Q?usp=share_link">
@@ -185,15 +242,15 @@
             </section>
             <h3>Gallerie</h3>
             <div class="glery">
-                <img class="illu" onclick="bite(this.src);" src="../projets/jeux/effondrement/acceuil.jpg" alt="">
-                <img class="illu" onclick="bite(this.src);" src="../projets/jeux/effondrement/camion.jpg" alt="">
-                <img class="illu" onclick="bite(this.src);" src="../projets/jeux/effondrement/credit.jpg" alt="">
-                <img class="illu" onclick="bite(this.src);" src="../projets/jeux/effondrement/lidl.jpg" alt="">
-                <img class="illu" onclick="bite(this.src);" src="../projets/jeux/effondrement/paris.jpg" alt="">
-                <img class="illu" onclick="bite(this.src);" src="../projets/jeux/effondrement/ville.jpg" alt="">
-                <img class="illu" onclick="bite(this.src);" src="../projets/jeux/effondrement/tab1.jpg" alt="">
-                <img class="illu" onclick="bite(this.src);" src="../projets/jeux/effondrement/tab2.jpg" alt="">
-                <img class="illu" onclick="bite(this.src);" src="../projets/jeux/effondrement/tab3.jpg" alt="">
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/jeux/effondrement/acceuil.jpg" alt="">
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/jeux/effondrement/camion.jpg" alt="">
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/jeux/effondrement/credit.jpg" alt="">
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/jeux/effondrement/lidl.jpg" alt="">
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/jeux/effondrement/paris.jpg" alt="">
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/jeux/effondrement/ville.jpg" alt="">
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/jeux/effondrement/tab1.jpg" alt="">
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/jeux/effondrement/tab2.jpg" alt="">
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/jeux/effondrement/tab3.jpg" alt="">
             </div>
             <div class="doss">
                 <a target="_blank" href="https://drive.google.com/drive/folders/1o9UapVo0DPST3Bgbn6JXxUaxlzMZxwjy?usp=share_link">
@@ -241,11 +298,80 @@
             </section>
             <h3>Gallerie</h3>
             <div class="glery">
-                <img class="illu" onclick="bite(this.src);" src="../projets/jeux/ryleh/utilisable/boite.jpg" alt="">
-                <img class="illu" onclick="bite(this.src);" src="../projets/jeux/ryleh/utilisable/carte.jpg" alt="">
-                <img class="illu" onclick="bite(this.src);" src="../projets/jeux/ryleh/utilisable/intboite.jpg" alt="">
-                <img class="illu" onclick="bite(this.src);" src="../projets/jeux/ryleh/utilisable/plateau.jpg" alt="">
-                <img class="illu" onclick="bite(this.src);" src="../projets/jeux/ryleh/utilisable/plateauvide.jpg" alt="">
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/jeux/ryleh/utilisable/boite.jpg" alt="">
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/jeux/ryleh/utilisable/carte.jpg" alt="">
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/jeux/ryleh/utilisable/intboite.jpg" alt="">
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/jeux/ryleh/utilisable/plateau.jpg" alt="">
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/jeux/ryleh/utilisable/plateauvide.jpg" alt="">
+            </div>
+            <div class="doss">
+                <a target="_blank" href="https://drive.google.com/drive/folders/1PbXmMz8NnIhre3w29GMjDH25_zH_e7Wz?usp=share_link">
+                    <button class="button-31"> Dossier du Projet</button>
+                </a>
+            </div>
+            
+        </div>
+
+
+        <hr>
+
+
+        <div class="projet" id="exp">
+            <div id="titre">
+                <h2>Explore</h2>
+            </div>
+            <div class="imgtxt">
+                <img class="illu" src="../projets/jeux/cochonne_s game/utilisable/acceuil.jpg" alt="">
+                <div class="txt">
+                    <div class="qr"><h3>Type: </h3><p>&ensp; Jeu vidéo</p></div>
+                    <div class="qr"><h3>Rôle: </h3><p>&ensp; Level Designer et Développeur</p></div>
+                    <div class="qr"><h3>Date: </h3><p>&ensp; Mars 2022</p></div>
+                    <h3>Résumé :</h3>
+                    <p class="desc">
+                        Perdu dans un bureau étrange où tout se ressemble vous devrez vous évader de cet enfer symétrique.
+                        <br><br>
+                        Chaque porte vous mènera vers un nouveau voyage, vous devrez toutes les explorer pour vous enfuir du bureau.
+                        
+                    </p>
+                </div>
+                
+            </div>
+            <section>
+                <h3 id="res">Description :</h3>
+                <p>
+                    Explore est le projet de fin d’année de mon DUT MMI avec une équipe de deux autres personnes nous devions réaliser un jeu court comportant différent environnement.
+                    <br><br>
+                    Pour ce projet j’ai réalisé le level design des niveaux du bureau, du village et du désert. 
+                    <br>
+                    J’ai également travaillé l’ensemble des lumières du jeu pour apporter du relief et une atmosphère particulière pour chaque niveau. Pour cela je me suis beaucoup servi du plugin Aura 2 sur unity qui permet notamment de gérer les lumières volumétriques. 
+                    <br>
+                    Et j’ai conçu quelques scripts comme ceux des statuts, des portes, ou du bateau.
+                    <br><br>
+                    C’est avec ce projet que nous avons fait gagner notre IUT lors du concours entre tout le DUT MMI de France, Le Festival MMI.
+                    <br><br>
+                     
+                </p>
+            </section>
+            <h3>Gallerie</h3>
+            <div class="glery">
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/jeux/cochonne_s game/utilisable/acceuil.jpg" alt="">
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/jeux/cochonne_s game/utilisable/canap.jpg" alt="">
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/jeux/cochonne_s game/utilisable/couloir.jpg" alt="">
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/jeux/cochonne_s game/utilisable/couloir2.jpg" alt="">
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/jeux/cochonne_s game/utilisable/escalier.jpg" alt="">
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/jeux/cochonne_s game/utilisable/int.jpg" alt="">
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/jeux/cochonne_s game/utilisable/int2.jpg" alt="">
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/jeux/cochonne_s game/utilisable/bateau.jpg" alt="">
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/jeux/cochonne_s game/utilisable/foret.jpg" alt="">
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/jeux/cochonne_s game/utilisable/foret2.jpg" alt="">
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/jeux/cochonne_s game/utilisable/parkour.jpg" alt="">
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/jeux/cochonne_s game/utilisable/portail.jpg" alt="">
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/jeux/cochonne_s game/utilisable/rive.jpg" alt="">
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/jeux/cochonne_s game/utilisable/sortie.jpg" alt="">
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/jeux/cochonne_s game/utilisable/villext.jpg" alt="">
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/jeux/cochonne_s game/utilisable/imm.jpg" alt="">
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/jeux/cochonne_s game/utilisable/linge.jpg" alt="">
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/jeux/cochonne_s game/utilisable/feu.jpg" alt="">
             </div>
             <div class="doss">
                 <a target="_blank" href="https://drive.google.com/drive/folders/1PbXmMz8NnIhre3w29GMjDH25_zH_e7Wz?usp=share_link">
