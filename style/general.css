@@ -421,3 +421,27 @@ section p a{
 .fa-chevron-right:hover{
     cursor: pointer;
 }
+
+section div{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+section div iframe{
+    margin-top: 4vh;
+}
+
+#twitch-embed iframe{
+    width: 50vw;
+    height: 50vh;
+}
+
+.fa-youtube{
+    font-size: 200pt;
+    
+    background-image: url(../img/noise-rouge.png);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}

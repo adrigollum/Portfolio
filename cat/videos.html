@@ -24,33 +24,359 @@
         </div>
     </header>
     <nav>
-        <a href="">
-            <img class="illu" src="../projets/photo/Ciel/ciel-leger.webp" alt="">
+        <a href="#mmi">
+            <img class="illu" src="../projets/video/ninja-leger.jpg" alt="">
             <img class="filtre" src="../img/noise-fond.png" alt="">
-            <p>MMI</p>
+            <p>Communauté MMI</p>
         </a>
-        <a href="">
-            <img class="illu" src="../projets/jeux/ryleh/plateau-leger.jpg" alt="">
+        <a href="#pub">
+            <img class="illu" src="../projets/video/pub.jpg" alt="">
             <img class="filtre" src="../img/noise-fond.png" alt="">
-            <p>Festival</p>
+            <p>PUB</p>
         </a>
-        <a href="">
-            <img class="illu" src="../projets/jeux/cochonne_s game/0/acceuil-leger.jpg" alt="">
+        <a href="#pv">
+            <img class="illu" src="../projets/video/paulva.jpg" alt="">
             <img class="filtre" src="../img/noise-fond.png" alt="">
-            <p>48h</p>
+            <p>Paul Va</p>
         </a>
-        <a href="">
-            <img class="illu" src="../projets/photo/Ciel/ciel-leger.webp" alt="">
+        <a href="#loop">
+            <img class="illu" src="../projets/video/loop.jpg" alt="">
+            <img class="filtre" src="../img/noise-fond.png" alt="">
+            <p>LOOP</p>
+        </a>
+        <a href="#tw">
+            <img class="illu" src="../projets/video/live/attente.jpg" alt="">
             <img class="filtre" src="../img/noise-fond.png" alt="">
             <p>Twitch</p>
         </a>
         <a href="">
-            <img class="illu" src="../projets/photo/Ciel/ciel-leger.webp" alt="">
+            <img class="illu" src="../projets/video/yt.jpg" alt="">
             <img class="filtre" src="../img/noise-fond.png" alt="">
             <p>Youtube</p>
         </a>
     </nav>
     <main>
+        <script>
+            var num="";
+            var gosse=[];
+            var idd="";
+            var ima = "";
+            function bite(image,idd) {
+                document.getElementById('retour').id = 'revisible';
+                document.getElementById('msgnotsent').id = 'msgsent';
+                if(image.charAt(image.length-1)=="g"){
+                    document.getElementById('grossebite').src = image.substring(0, image.length - 4)+'_720.jpg';
+                }
+                else if(image.charAt(image.length-1)=="f"){
+                    document.getElementById('grossebite').src = image;
+                }
+                var papa = idd.parentElement;
+                gosse = papa.children;
+                ima = image;
+                for (let i=0;i<gosse.length;i+=1){
+                    
+                    if(gosse[i].src==image){
+                        console.log(gosse[i]);
+                        console.log(i);
+                        num=i;
+                        return num;
+                        return gosse;
+                        
+                    }
+                }
+                return ima
+                console.log(gosse);
+              }
+
+
+            function change_bite(sens) {
+                if(sens=='L' && num !=0){
+                    var image = gosse[num-1].src;
+                    if(image.charAt(image.length-1)=="g"){
+                        document.getElementById('grossebite').src = image.substring(0, image.length - 4)+'_720.jpg';
+                    }
+                    else if(image.charAt(image.length-1)=="f"){
+                        document.getElementById('grossebite').src = image;
+                    }
+                }
+                else if(sens=='L' && num ==0){
+                    var image = gosse[gosse.length-1].src;
+                    if(image.charAt(image.length-1)=="g"){
+                        document.getElementById('grossebite').src = image.substring(0, image.length - 4)+'_720.jpg';
+                    }
+                    else if(image.charAt(image.length-1)=="f"){
+                        document.getElementById('grossebite').src = image;
+                    }
+                }
+                else if(sens=='R' && num !=gosse.length-1){
+                    var image = gosse[num+1].src;
+                    if(image.charAt(image.length-1)=="g"){
+                        document.getElementById('grossebite').src = image.substring(0, image.length - 4)+'_720.jpg';
+                    }
+                    else if(image.charAt(image.length-1)=="f"){
+                        document.getElementById('grossebite').src = image;
+                    }
+                }
+                else if(sens=='R' && num ==gosse.length-1){
+                    var image = gosse[0].src;
+                    if(image.charAt(image.length-1)=="g"){
+                        document.getElementById('grossebite').src = image.substring(0, image.length - 4)+'_720.jpg';
+                    }
+                    else if(image.charAt(image.length-1)=="f"){
+                        document.getElementById('grossebite').src = image;
+                    }
+                }
+                
+                
+                for (let i=0;i<gosse.length;i+=1){
+                    
+                    if(gosse[i].src==image){
+                        console.log(gosse[i]);
+                        console.log(i);
+                        num=i;
+                        return num;
+                        return gosse;
+                        
+                    }
+                }
+                return ima
+                console.log(gosse);
+                
+            }
+        </script>
+
+        <div id="msgnotsent">
+            <i class="fa-solid fa-chevron-left" onclick="change_bite('L')"></i>
+            <i class="fa-solid fa-chevron-right" onclick="change_bite('R')"></i>            
+            <i class="fa-sharp fa-solid fa-xmark" onclick="document.getElementById('revisible').id = 'retour';document.getElementById('msgsent').id = 'msgnotsent';"></i>
+            <img id="grossebite" src="" alt="">
+        </div>
+        <div id="retour" onclick="document.getElementById('revisible').id = 'retour';document.getElementById('msgsent').id = 'msgnotsent';">
+            
+        </div>
+
+        <div class="projet" id="mmi">
+            <div id="titre">
+                <h2>Communauté MMI</h2>
+            </div>
+            <div class="imgtxt">
+                <img class="illu" src="../projets/video/ninja-leger.jpg" alt="">
+                <div class="txt">
+                    <div class="qr"><h3>Type: </h3><p>&ensp; Vidéos de communication</p></div>
+                    <div class="qr"><h3>Rôle: </h3><p>&ensp; Réalisateur, Acteur, Monteur et Cadreur</p></div>
+                    <div class="qr"><h3>Date: </h3><p>&ensp; 2021</p></div>
+                    <h3>Résumé :</h3>
+                    <p class="desc">
+                        Deux courtes vidéos servant à la communication de l’IUT d'Haguenau.
+                        <br><br>
+                        Mike vous expliquant comment faire des vidéos et un message de prévention contre le harcèlement des Ninjas
+                    </p>
+                </div>
+                
+            </div>
+            <section>
+                <h3 id="res">Description :</h3>
+                <p>
+                    Ces deux vidéos s'inscrivent dans le cadre de la communication de l’IUT d’Haguenau pour leur campagne “Communauté MMI” menée par les étudiants. Elle consiste à produire du contenu pour les différents réseaux de l’IUT afin d’en faire la promotion ou simplement de produire du contenu divertissant.
+                    <br><br>
+                    Ma première contribution à cette campagne a été “ Tuto : comment faire une vidéo avec Mike “ qui comme son nom l’indique assez brièvement la base de la réalisation de vidéos avec un brin d’humour.
+                    <br><br>
+                    Et ma deuxième production et une fiction humoristique aux airs de drame prenant pour base la surprenante “ Journée mondiale du Ninja “.
+                </p>
+                <div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/iP2CMkY6gIQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/-MC_SGlh48s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                </div>
+            </section>
+            
+            
+        </div>
+
+        <hr>
+
+        <div class="projet" id="pub">
+            <div id="titre">
+                <h2>PUB</h2>
+            </div>
+            <div class="imgtxt">
+                <img class="illu" src="../projets/video/pub.jpg" alt="">
+                <div class="txt">
+                    <div class="qr"><h3>Type: </h3><p>&ensp; PUB</p></div>
+                    <div class="qr"><h3>Rôle: </h3><p>&ensp; Réalisateur, Acteur, Monteur et Cadreur</p></div>
+                    <div class="qr"><h3>Date: </h3><p>&ensp; 2020</p></div>
+                    <h3>Résumé :</h3>
+                    <p class="desc">
+                        Une pub pour du beurre surprenante.
+                        <br><br>
+                        Et une pub pour un étrange produit révolutionnaire: PSHIIT COCO.
+                    </p>
+                </div>
+                
+            </div>
+            <section>
+                <h3 id="res">Description :</h3>
+                <p>
+                    Ses deux pubs ont été réalisées dans le cadre d’un exercice d’audiovisuel durant ma formation en MMI.
+                </p>
+                <div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/h-5z6GEoYe4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/GWYynMbkqYY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </section>
+            
+            
+        </div>
+
+        <hr>
+
+        <div class="projet" id="pv">
+            <div id="titre">
+                <h2>Paul Va</h2>
+            </div>
+            <div class="imgtxt">
+                <img class="illu" src="../projets/video/paulva.jpg" alt="">
+                <div class="txt">
+                    <div class="qr"><h3>Type: </h3><p>&ensp; Clip Festival</p></div>
+                    <div class="qr"><h3>Rôle: </h3><p>&ensp; Monteur</p></div>
+                    <div class="qr"><h3>Date: </h3><p>&ensp; 2020</p></div>
+                    <h3>Résumé :</h3>
+                    <p class="desc">
+                        Résumé des journées du Festival Paul Va au cinéma de la fac de lettres de Montpellier.
+                    </p>
+                </div>
+                
+            </div>
+            <section>
+                <h3 id="res">Description :</h3>
+                <p>
+                    Ses vidéos ont été montées durant le Festival Paul Va au cinéma, elle résume la journée sur le festival, les activités proposées, les interventions de professionnels du cinéma, les projections de films.
+                <br><br>
+                Ce fut pour moi un véritable exercice de rapidité, car les vidéos étaient montées dans la journée au fur et à mesure que les rush arrivaient et devaient être fini le soir même pour assurer la communication du festival.
+            </p>
+            <div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Hg9avVD3hNM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FPaulVaAuCinema%2Fvideos%2F828627087610676%2F&show_text=false&width=560&t=0" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FPaulVaAuCinema%2Fvideos%2F203671284064903%2F&show_text=false&width=560&t=0" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+
+            </div>
+            </section>
+            
+            
+            
+            
+        </div>
+
+        <hr>
+
+        <div class="projet" id="loop">
+            <div id="titre">
+                <h2>LOOP</h2>
+            </div>
+            <div class="imgtxt">
+                <img class="illu" src="../projets/video/loop.jpg" alt="">
+                <div class="txt">
+                    <div class="qr"><h3>Type: </h3><p>&ensp; Fiction</p></div>
+                    <div class="qr"><h3>Rôle: </h3><p>&ensp; Réalisateur, Acteur, Monteur et Cadreur</p></div>
+                    <div class="qr"><h3>Date: </h3><p>&ensp; 2019</p></div>
+                    <h3>Résumé :</h3>
+                    <p class="desc">
+                        Une étrange journée attend Camille.
+                    </p>
+                </div>
+                
+            </div>
+            <section>
+                <h3 id="res">Description :</h3>
+                <p>
+                    LOOP est ma première vidéo réalisée lors d’un 48h. Elle répond donc à plusieurs contrainte que voici :
+                <br>
+                &ensp;- Un personnage féminin appeler Camille qui est une politique
+                <br>
+                &ensp;- Un réveil
+                <br>
+                &ensp;- La réplique “Tu veux bien allumer la lumière ?"
+                <br>
+                &ensp;- Le thème Fantastique
+                <br>
+                &ensp;- Un faux raccord
+                <br><br>
+                Ma proposition repose donc sur le principe de boucle temporelle comme le jour de la marmotte, dont j’ai repris la musique et raconte l’histoire de Camille, présidente de la république, essayant de résoudre un problème de grève.
+
+            </p>
+            <div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/o8_EX9T8Ch0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            </section>
+        </div>
+            
+            <hr>
+
+            <div class="projet" id="tw">
+                <div id="titre">
+                    <h2>TWITCH</h2>
+                </div>
+                <div class="imgtxt">
+                    <img class="illu" src="../projets/video/live/attente.jpg" alt="">
+                    <div class="txt">
+                        <div class="qr"><h3>Type: </h3><p>&ensp; Stream</p></div>
+                        <div class="qr"><h3>Rôle: </h3><p>&ensp; Streamer</p></div>
+                        <div class="qr"><h3>Date: </h3><p>&ensp; Depuis 2022</p></div>
+                        
+                    </div>
+                    
+                </div>
+                <section>
+                    <h3 id="res">Description :</h3>
+                    <p>
+                        J’anime et prépare des lives sur divers sujets quand le temps me le permet. C’est un projet qui me tient à cœur et que j'essaie de mener à bien même si mon rythme n'est pas des plus régulier. 
+                        <br>
+                        J’ai réalisé l’ensemble de la DA et des scènes pour avoir une identité visuelle unique.
+                </p>
+                <div id="twitch-embed"></div>
+
+<!-- Load the Twitch embed script -->
+                <script src="https://player.twitch.tv/js/embed/v1.js"></script>
+
+                <!-- Create a Twitch.Player object. This will render within the placeholder div -->
+                <script type="text/javascript">
+                new Twitch.Player("twitch-embed", {
+                    channel: "adrigollum"
+                });
+                </script>
+                </section>
+                
+            
+        </div>
+
+        <hr>
+
+        <div class="projet" id="yt">
+            <div id="titre">
+                <h2>Youtube</h2>
+            </div>
+            <div class="imgtxt">
+                <img class="illu" src="../projets/video/yt.jpg" alt="">
+                <div class="txt">
+                    <div class="qr"><h3>Type: </h3><p>&ensp; Vidéos Diverse</p></div>
+                    <div class="qr"><h3>Rôle: </h3><p>&ensp; Vidéaste</p></div>
+                    <div class="qr"><h3>Date: </h3><p>&ensp; Depuis 2018</p></div>
+                    
+                </div>
+                
+            </div>
+            <section>
+                <h3 id="res">Description :</h3>
+                <p>
+                    Je crée des fictions et des petites séries autour d’univers et de sujets qui me passionnent. C'est pour moi un moyen d’expression et de communiquer avec mes amis. Elle reflète mon évolution dans la création vidéo, dés petites vidéos faite en deux heures a de plus gros projets.
+                </p>
+                <div>
+                    <a href="https://www.youtube.com/channel/UC6jx0K8RcvCECIvwN5hRCUw/videos" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </section>
+            
+        
+    </div>
 
     </main>
     <footer>

@@ -24,28 +24,296 @@
         </div>
     </header>
     <nav>
-        <a href="">
-            <img class="illu" src="../projets/photo/Ciel/ciel-leger.webp" alt="">
+        <a href="#spo">
+            <img class="illu" src="../projets/web/spotinaz/utilisable/logo.jpg" alt="">
             <img class="filtre" src="../img/noise-fond.png" alt="">
             <p>Spotinaz</p>
         </a>
-        <a href="">
-            <img class="illu" src="../projets/jeux/ryleh/plateau-leger.jpg" alt="">
+        <a href="#cv">
+            <img class="illu" src="../projets/web/cv/cv.jpg" alt="">
             <img class="filtre" src="../img/noise-fond.png" alt="">
             <p>Cv Web</p>
         </a>
-        <a href="">
-            <img class="illu" src="../projets/jeux/cochonne_s game/0/acceuil-leger.jpg" alt="">
+        <a href="#etu">
+            <img class="illu" src="../projets/web/etuview/etu.png" alt="">
             <img class="filtre" src="../img/noise-fond.png" alt="">
             <p>Etuview</p>
         </a>
-        <a href="">
-            <img class="illu" src="../projets/photo/Ciel/ciel-leger.webp" alt="">
+        <a href="#crea">
+            <img class="illu" src="../projets/web/creaventure/acceuil.jpg" alt="">
             <img class="filtre" src="../img/noise-fond.png" alt="">
             <p>Créaventure</p>
         </a>
     </nav>
     <main>
+        <script>
+            var num="";
+            var gosse=[];
+            var idd="";
+            var ima = "";
+            function bite(image,idd) {
+                document.getElementById('retour').id = 'revisible';
+                document.getElementById('msgnotsent').id = 'msgsent';
+                if(image.charAt(image.length-1)=="g"){
+                    document.getElementById('grossebite').src = image.substring(0, image.length - 4)+'_720.jpg';
+                }
+                else if(image.charAt(image.length-1)=="f"){
+                    document.getElementById('grossebite').src = image;
+                }
+                var papa = idd.parentElement;
+                gosse = papa.children;
+                ima = image;
+                for (let i=0;i<gosse.length;i+=1){
+                    
+                    if(gosse[i].src==image){
+                        console.log(gosse[i]);
+                        console.log(i);
+                        num=i;
+                        return num;
+                        return gosse;
+                        
+                    }
+                }
+                return ima
+                console.log(gosse);
+              }
+
+
+            function change_bite(sens) {
+                if(sens=='L' && num !=0){
+                    var image = gosse[num-1].src;
+                    if(image.charAt(image.length-1)=="g"){
+                        document.getElementById('grossebite').src = image.substring(0, image.length - 4)+'_720.jpg';
+                    }
+                    else if(image.charAt(image.length-1)=="f"){
+                        document.getElementById('grossebite').src = image;
+                    }
+                }
+                else if(sens=='L' && num ==0){
+                    var image = gosse[gosse.length-1].src;
+                    if(image.charAt(image.length-1)=="g"){
+                        document.getElementById('grossebite').src = image.substring(0, image.length - 4)+'_720.jpg';
+                    }
+                    else if(image.charAt(image.length-1)=="f"){
+                        document.getElementById('grossebite').src = image;
+                    }
+                }
+                else if(sens=='R' && num !=gosse.length-1){
+                    var image = gosse[num+1].src;
+                    if(image.charAt(image.length-1)=="g"){
+                        document.getElementById('grossebite').src = image.substring(0, image.length - 4)+'_720.jpg';
+                    }
+                    else if(image.charAt(image.length-1)=="f"){
+                        document.getElementById('grossebite').src = image;
+                    }
+                }
+                else if(sens=='R' && num ==gosse.length-1){
+                    var image = gosse[0].src;
+                    if(image.charAt(image.length-1)=="g"){
+                        document.getElementById('grossebite').src = image.substring(0, image.length - 4)+'_720.jpg';
+                    }
+                    else if(image.charAt(image.length-1)=="f"){
+                        document.getElementById('grossebite').src = image;
+                    }
+                }
+                
+                
+                for (let i=0;i<gosse.length;i+=1){
+                    
+                    if(gosse[i].src==image){
+                        console.log(gosse[i]);
+                        console.log(i);
+                        num=i;
+                        return num;
+                        return gosse;
+                        
+                    }
+                }
+                return ima
+                console.log(gosse);
+                
+            }
+        </script>
+
+        <div id="msgnotsent">
+            <i class="fa-solid fa-chevron-left" onclick="change_bite('L')"></i>
+            <i class="fa-solid fa-chevron-right" onclick="change_bite('R')"></i>            
+            <i class="fa-sharp fa-solid fa-xmark" onclick="document.getElementById('revisible').id = 'retour';document.getElementById('msgsent').id = 'msgnotsent';"></i>
+            <img id="grossebite" src="" alt="">
+        </div>
+        <div id="retour" onclick="document.getElementById('revisible').id = 'retour';document.getElementById('msgsent').id = 'msgnotsent';">
+            
+        </div>
+
+        <div class="projet" id="spo">
+            <div id="titre">
+                <h2>Spotinaz</h2>
+            </div>
+            <div class="imgtxt">
+                <img class="illu" src="../projets/web/spotinaz/utilisable/logo.jpg" alt="">
+                <div class="txt">
+                    <div class="qr"><h3>Type: </h3><p>&ensp; Site collaboratif</p></div>
+                    <div class="qr"><h3>Rôle: </h3><p>&ensp; Développeur full-stack</p></div>
+                    <div class="qr"><h3>Date: </h3><p>&ensp; 2021</p></div>
+                    <h3>Résumé :</h3>
+                    <p class="desc">
+                        Vous cherchez un site de musique ? Qui permette de créer des playlists ? Qui regrouperait les plus grands artistes ? 
+                        <br>
+                        N’en dites pas plus, ce qu'il vous faut, c'est Spotinaz !  
+                        <br><br>
+                        De François Juno à Ubanelle, Spotinaz rassemble la crème de la musique, mais vous aussi, vous pouvez faire découvrir vos musiques préférées en les ajoutant et en les partageant
+                    </p>
+                </div>
+                
+            </div>
+            <section>
+                <h3 id="res">Description :</h3>
+                <p>
+                    Spotinaz est un projet d'étude que j’ai développé durant ma seconde année de DUT MMI. Il s'inspire énormément de l'interface et des fonctionnalités de Spotify
+                    <br><br>
+                    Il permet d’ajouter des artistes, des albums et de la musique, mais aussi de créer des playlists et de s’abonner à certains créateurs pour suivre leurs publications. Et bien sûr de lire ses musiques sur le site.
+                    <br><br>
+                    Il a été développé dans l'environnement symfony avec du TWIG et du PHP pour la partie back relier à une base de donnée en SQL et pour le front avec les classiques HTML, CSS et JS
+
+
+                     
+                </p>
+            </section>
+            <h3>Gallerie</h3>
+            <div class="glery">
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/web/spotinaz/utilisable/logo.jpg" alt="">                
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/web/spotinaz/utilisable/art.jpg" alt="">
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/web/spotinaz/utilisable/music.jpg" alt="">
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/web/spotinaz/utilisable/play.jpg" alt="">
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/web/spotinaz/utilisable/acceuil.jpg" alt="">
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/web/spotinaz/utilisable/mus.jpg" alt="">
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/web/spotinaz/utilisable/playli.jpg" alt="">                
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/web/spotinaz/utilisable/profil.jpg" alt="">
+            </div>
+            
+            
+        </div>
+
+        <hr>
+
+        <div class="projet" id="cv">
+            <div id="titre">
+                <h2>CV Web</h2>
+            </div>
+            <div class="imgtxt">
+                <img class="illu" src="../projets/web/cv/cv.jpg" alt="">
+                <div class="txt">
+                    <div class="qr"><h3>Type: </h3><p>&ensp; Site vitrine</p></div>
+                    <div class="qr"><h3>Rôle: </h3><p>&ensp; Développeur full-stack et Graphiste</p></div>
+                    <div class="qr"><h3>Date: </h3><p>&ensp; 2021</p></div>
+                    <h3>Résumé :</h3>
+                    <p class="desc">
+                        CV en ligne s'inspirant de l'esthétique des jeux rétro et plus particulièrement de Megaman.
+                    </p>
+                </div>
+                
+            </div>
+            <section>
+                <h3 id="res">Description :</h3>
+                <p>
+                    Il s’agit d’un projet d'étude consistant à mettre en place un CV interactif en ligne.
+                    <br>
+                    Pour cela, je me suis inspirée de l’introduction et des menus de Megaman II. Les animations ont été réalisées en JS et j’ai redesigné les sprites du jeu comme par exemple en redessinant megaman un peu plus à mon image.
+                </p>
+            </section>
+            <h3>Gallerie</h3>
+            <div class="glery">
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/web/cv/titre.gif" alt="">                
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/web/cv/carbl.jpg" alt="">
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/web//cv/carrenoir.jpg" alt="">
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/web/cv/fond.gif" alt="">
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/web/cv/cours.gif" alt="">
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/web/cv/pose.gif" alt="">
+            </div>
+            
+            
+        </div>
+
+        <hr>
+
+        <div class="projet" id="etu">
+            <div id="titre">
+                <h2>Etuview</h2>
+            </div>
+            <div class="imgtxt">
+                <img class="illu" src="../projets/web/etuview/etu.png" alt="">
+                <div class="txt">
+                    <div class="qr"><h3>Type: </h3><p>&ensp; Blog</p></div>
+                    <div class="qr"><h3>Rôle: </h3><p>&ensp; Développeur back-end</p></div>
+                    <div class="qr"><h3>Date: </h3><p>&ensp; 2021</p></div>
+                    <h3>Résumé :</h3>
+                    <p class="desc">
+                        Etuview est un site d’astuce et de conseil orienté pour les étudiants et les jeunes en général.
+                        <br>
+                        Il regroupe des bons plans, des événements et des activités qui pourraient intéresser les étudiants en Alsace.
+                        
+                    </p>
+                </div>
+                
+            </div>
+            <section>
+                <h3 id="res">Description :</h3>
+                <p>
+                    Etuview est un projet réalisé avec 2 autres personnes durant mon DUT MMI. Il s’agit d’un blog fait sous WordPress.
+                </p>
+            </section>
+            
+            
+            
+            
+        </div>
+
+
+        <hr>
+
+        <div class="projet" id="crea">
+            <div id="titre">
+                <h2>Créaventure</h2>
+            </div>
+            <div class="imgtxt">
+                <img class="illu" src="../projets/web/creaventure/acceuil.jpg" alt="">
+                <div class="txt">
+                    <div class="qr"><h3>Type: </h3><p>&ensp; Site collaboratif</p></div>
+                    <div class="qr"><h3>Rôle: </h3><p>&ensp; Développeur full stack</p></div>
+                    <div class="qr"><h3>Date: </h3><p>&ensp; 2021</p></div>
+                    <h3>Résumé :</h3>
+                    <p class="desc">
+                        Créaventure est un site de création et de partage d'histoire dont vous êtes le héros.
+                        <br>
+                        Il vous permet d'écrire vos propres aventures et de jouer à celle publiée par d’autres.
+                    </p>
+                </div>
+                
+            </div>
+            <section>
+                <h3 id="res">Description :</h3>
+                <p>
+                    Créaventure est le premier site web que j’ai réalisé. Il permet de créer des histoires à embranchement et d’y jouer. On peut également jouer à celle publiée par les autres contributeurs et les noter. 
+                    <br>
+                    On peut y rechercher une histoire en particulier ou bien se laisser porter par les recommandations de la page d'accueil qui référence les histoires les mieux notées, les plus jouées, mais aussi quelques titres aléatoires pour permettre de découvrir des pépites cachées.
+                    <br><br>
+                    Le site est réalisé en HTML et CSS pour le front end et le back est gérée avec du PHP communiquant avec une base de données en SQL.
+                
+                </p>
+            </section>
+            <h3>Gallerie</h3>
+            <div class="glery">
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/web/creaventure/acceuil.jpg" alt="">                
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/web/creaventure/av.jpg" alt="">
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/web/creaventure/av+.jpg" alt="">
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/web/creaventure/best.jpg" alt="">
+                <img class="illu" onclick="bite(this.src, this);" src="../projets/web/creaventure/co.jpg" alt="">
+
+            </div>
+            
+            
+        </div>
+
 
     </main>
     <footer>
