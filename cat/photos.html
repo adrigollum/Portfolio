@@ -22,40 +22,121 @@
             <h2>Mes Projets Photos</h2>
         </div>
     </header>
-    <nav>
-        <a href="">
-            <img class="illu" src="../projets/photo/Ciel/ciel-leger.webp" alt="">
-            <img class="filtre" src="../img/noise-fond.png" alt="">
-            <p>Ciel</p>
-        </a>
-        <a href="">
-            <img class="illu" src="../projets/jeux/ryleh/plateau-leger.jpg" alt="">
-            <img class="filtre" src="../img/noise-fond.png" alt="">
-            <p>Mariages</p>
-        </a>
-        <a href="">
-            <img class="illu" src="../projets/jeux/cochonne_s game/0/acceuil-leger.jpg" alt="">
-            <img class="filtre" src="../img/noise-fond.png" alt="">
-            <p>Montagnes</p>
-        </a>
-        <a href="">
-            <img class="illu" src="../projets/photo/Ciel/ciel-leger.webp" alt="">
-            <img class="filtre" src="../img/noise-fond.png" alt="">
-            <p>Monuments</p>
-        </a>
-        <a href="">
-            <img class="illu" src="../projets/photo/Ciel/ciel-leger.webp" alt="">
-            <img class="filtre" src="../img/noise-fond.png" alt="">
-            <p>Nature</p>
-        </a>
-        <a href="">
-            <img class="illu" src="../projets/photo/Ciel/ciel-leger.webp" alt="">
-            <img class="filtre" src="../img/noise-fond.png" alt="">
-            <p>Ville</p>
-        </a>
+    <nav id="ds">
+        
+            <img class="illu" onclick="bite(this.src, this);" src="../projets/photo/utilisable/ciel.jpg" alt="">
+            <img class="illu" onclick="bite(this.src, this);" src="../projets/photo/utilisable/pouet.jpg" alt="">
+            <img class="illu" onclick="bite(this.src, this);" src="../projets/photo/utilisable/explo.jpg" alt="">
+            <img class="illu" onclick="bite(this.src, this);" src="../projets/photo/utilisable/hotel.jpg" alt="">
+            <img class="illu" onclick="bite(this.src, this);" src="../projets/photo/utilisable/route.jpg" alt="">
+            <img class="illu" onclick="bite(this.src, this);" src="../projets/photo/utilisable/west.jpg" alt="">
+            <img class="illu" onclick="bite(this.src, this);" src="../projets/photo/utilisable/arbre.jpg" alt="">
+            <img class="illu" onclick="bite(this.src, this);" src="../projets/photo/utilisable/plaine.jpg" alt="">
+            <img class="illu" onclick="bite(this.src, this);" src="../projets/photo/utilisable/assis.jpg" alt="">
+            <img class="illu" onclick="bite(this.src, this);" src="../projets/photo/utilisable/chemin.jpg" alt="">
+            <img class="illu" onclick="bite(this.src, this);" src="../projets/photo/utilisable/mont.jpg" alt="">
+            <img class="illu" onclick="bite(this.src, this);" src="../projets/photo/utilisable/monta.jpg" alt="">
+            <img class="illu" onclick="bite(this.src, this);" src="../projets/photo/utilisable/neige.jpg" alt="">
+            <img class="illu" onclick="bite(this.src, this);" src="../projets/photo/utilisable/station.jpg" alt="">
+            <img class="illu" onclick="bite(this.src, this);" src="../projets/photo/utilisable/basmont.jpg" alt="">
+            <img class="illu" onclick="bite(this.src, this);" src="../projets/photo/utilisable/statbas.jpg" alt="">
+            <img class="illu" onclick="bite(this.src, this);" src="../projets/photo/utilisable/trou.jpg" alt="">
+            <img class="illu" onclick="bite(this.src, this);" src="../projets/photo/utilisable/grotte.jpg" alt="">
+            <img class="illu" onclick="bite(this.src, this);" src="../projets/photo/utilisable/egli.jpg" alt="">
+            <img class="illu" onclick="bite(this.src, this);" src="../projets/photo/utilisable/statu.jpg" alt="">
+            <img class="illu" onclick="bite(this.src, this);" src="../projets/photo/utilisable/lum.jpg" alt="">
+            <img class="illu" onclick="bite(this.src, this);" src="../projets/photo/utilisable/rue.jpg" alt="">
+            <img class="illu" onclick="bite(this.src, this);" src="../projets/photo/utilisable/entree.jpg" alt="">
+            <img class="illu" onclick="bite(this.src, this);" src="../projets/photo/utilisable/pave.jpg" alt="">
+            <img class="illu" onclick="bite(this.src, this);" src="../projets/photo/utilisable/arche.jpg" alt="">
+            <img class="illu" onclick="bite(this.src, this);" src="../projets/photo/utilisable/vill.jpg" alt="">
+            <img class="illu" onclick="bite(this.src, this);" src="../projets/photo/utilisable/vitro.jpg" alt="">
+            <img class="illu" onclick="bite(this.src, this);" src="../projets/photo/utilisable/pont.jpg" alt="">
+            <img class="illu" onclick="bite(this.src, this);" src="../projets/photo/utilisable/caillou.jpg" alt="">
+            <img class="illu" onclick="bite(this.src, this);" src="../projets/photo/utilisable/sol.jpg" alt="">
+            <img class="illu" onclick="bite(this.src, this);" src="../projets/photo/utilisable/blé.jpg" alt="">
+            <img class="illu" onclick="bite(this.src, this);" src="../projets/photo/utilisable/esc.jpg" alt="">
+            <img class="illu" onclick="bite(this.src, this);" src="../projets/photo/utilisable/park.jpg" alt="">
+            <img class="illu" onclick="bite(this.src, this);" src="../projets/photo/utilisable/sonic.jpg" alt="">
+            <img class="illu" onclick="bite(this.src, this);" src="../projets/photo/utilisable/voit.jpg" alt="">
+        
     </nav>
     <main>
+        <script>
+            var num="";
+            var gosse=[];
+            var idd="";
+            var ima = "";
+            function bite(image,idd) {
+                document.getElementById('retour').id = 'revisible';
+                document.getElementById('msgnotsent').id = 'msgsent';
+                document.getElementById('grossebite').src = image.substring(0, image.length - 4)+'_720.jpg';
+                var papa = idd.parentElement;
+                gosse = papa.children;
+                ima = image;
+                for (let i=0;i<gosse.length;i+=1){
+                    
+                    if(gosse[i].src==image){
+                        console.log(gosse[i]);
+                        console.log(i);
+                        num=i;
+                        return num;
+                        return gosse;
+                        
+                    }
+                }
+                return ima
+                console.log(gosse);
+              }
 
+
+            function change_bite(sens) {
+                if(sens=='L' && num !=0){
+                    var image = gosse[num-1].src;
+                    document.getElementById('grossebite').src = image.substring(0, image.length - 4)+'.jpg';
+                }
+                else if(sens=='L' && num ==0){
+                    var image = gosse[gosse.length-1].src;
+                    document.getElementById('grossebite').src = image.substring(0, image.length - 4)+'.jpg';
+                }
+                else if(sens=='R' && num !=gosse.length-1){
+                    var image = gosse[num+1].src;
+                    document.getElementById('grossebite').src = image.substring(0, image.length - 4)+'.jpg';
+                }
+                else if(sens=='R' && num ==gosse.length-1){
+                    var image = gosse[0].src;
+                    document.getElementById('grossebite').src = image.substring(0, image.length - 4)+'.jpg';
+                }
+                
+                
+                for (let i=0;i<gosse.length;i+=1){
+                    
+                    if(gosse[i].src==image){
+                        console.log(gosse[i]);
+                        console.log(i);
+                        num=i;
+                        return num;
+                        return gosse;
+                        
+                    }
+                }
+                return ima
+                console.log(gosse);
+                
+            }
+        </script>
+
+        <div id="msgnotsent">
+            <i class="fa-solid fa-chevron-left" onclick="change_bite('L')"></i>
+            <i class="fa-solid fa-chevron-right" onclick="change_bite('R')"></i>            
+            <i class="fa-sharp fa-solid fa-xmark" onclick="document.getElementById('revisible').id = 'retour';document.getElementById('msgsent').id = 'msgnotsent';"></i>
+            <img id="grossebite" src="" alt="">
+        </div>
+        <div id="retour" onclick="document.getElementById('revisible').id = 'retour';document.getElementById('msgsent').id = 'msgnotsent';">
+            
+        </div>
+
+        
     </main>
     <footer>
         <h2>Site creer par adrigollum</h2>

@@ -97,6 +97,14 @@ nav a{
 
 }
 
+#ds img{
+    width: 38vw;
+    height: 43vh;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 2vw;
+}
+
 a:hover p{
     font-size: 23pt;
     transition-duration: 500ms;
@@ -201,6 +209,11 @@ main hr{
     background-image: url(../img/noise-noir.png);
     padding: 1vh;
     display: flex;
+}
+
+.imgtxt .illu{
+    width: 38vw;
+    height: 43vh;
 }
 
 .qr{
@@ -445,3 +458,4 @@ section div iframe{
     -webkit-background-clip: text;
     color: transparent;
 }
+
